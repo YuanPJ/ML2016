@@ -1,1 +1,1 @@
-python linear_regression.sh
+python3 linear_regression.py
