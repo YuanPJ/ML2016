@@ -25,10 +25,10 @@ for i in range(len(data)) :
     if ( data[i][2] == 'PM2.5' ) :
         day = day + 1
         temp[0][month].extend( data[i][3:27] ) # PM2.5
-        temp[1][month].extend( data[i-2][3:27] ) #O3   X
-        temp[2][month].extend( data[i-3][3:27] ) #NOx  O !
-        temp[3][month].extend( data[i-4][3:27] ) #NO2  O !
-        temp[4][month].extend( data[i-5][3:27] ) #NO   O O
+        temp[1][month].extend( data[i-2][3:27] ) #O3
+        temp[2][month].extend( data[i-3][3:27] ) #NOx
+        temp[3][month].extend( data[i-4][3:27] ) #NO2
+        temp[4][month].extend( data[i-5][3:27] ) #NO
         if ( day == 20 ) :
             month = month + 1
             day = 0
@@ -44,7 +44,6 @@ for i in range(9) :
 par = np.array(ran)
 bias = rand.uniform(0, 0.1)
 
-#5000
 par[0] = [-2.29229551e-02, -3.56201542e-02, 2.24035092e-01,
           -2.32844907e-01, -5.78932084e-02, 5.27511607e-01,
           -5.64240563e-01, -2.97617929e-04, 1.09713633e+00]

@@ -75,7 +75,7 @@ par[1] = [ -2.91894160e-02,  -3.70030734e-02,   2.24342896e-01,
            -2.33749998e-01,  -5.54508372e-02,   5.19824579e-01,
            -4.92923064e-01,  -2.77964939e-02,   1.06607673e+00]
 
-# Set the first n parameters to zero
+# Set some parameters to zero
 par[0, 0] = par[0, 1] = par[0, 2] = par[0, 3] = par[0, 4] = par[0, 5] = 0
 par[2, 0] = par[2, 1] = par[2, 2] = par[2, 3] = 0
 par[3, 0] = par[3, 1] = par[3, 2] = par[3, 3] = 0
@@ -112,6 +112,7 @@ for times in range(iter) :
         temp = par[1]
         par[2:num] = par[2:num] - lr * 2 * g[2:num] / np.sqrt(G)[2:num]
         bias = bias - lr * b / math.sqrt(B)
+        # Set some parameters to zero.
         par[0, 0] = par[0, 1] = par[0, 2] = par[0, 3] = par[0, 4] = par[0, 5] = 0
         par[2, 0] = par[2, 1] = par[2, 2] = par[2, 3] = 0
         par[3, 0] = par[3, 1] = par[3, 2] = par[3, 3] = 0
