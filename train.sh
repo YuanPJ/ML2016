@@ -1,1 +1,0 @@
-python3 dnn.py $1 $2
