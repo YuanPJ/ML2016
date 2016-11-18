@@ -1,1 +1,1 @@
-python3 logistic_test.py $1 $2 $3
+python3 dnn_test.py $1 $2 $3
