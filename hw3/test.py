@@ -1,2 +1,0 @@
-print('gg')
-print('gg')
